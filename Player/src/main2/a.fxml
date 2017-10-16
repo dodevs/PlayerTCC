@@ -39,8 +39,8 @@
             <Pane fx:id="pane1" layoutY="103.0" prefHeight="598.0" prefWidth="1093.0" visible="false">
          <children>
             <Button fx:id="aleatorio" layoutX="1003.0" layoutY="542.0" mnemonicParsing="false" onAction="#click" text="Aleatorio" />
-            <Button layoutX="903.0" layoutY="541.0" mnemonicParsing="false" onAction="#prox" text="Proximo" />
-            <Button layoutX="807.0" layoutY="541.0" mnemonicParsing="false" onAction="#ante" text="Anterior" />
+            <Button layoutX="903.0" layoutY="541.0" mnemonicParsing="false" onAction="#prox" text="Adianta anta" />
+            <Button layoutX="807.0" layoutY="541.0" mnemonicParsing="false" onAction="#ante" text="Volta porra" />
             <MediaView fx:id="media" fitHeight="200.0" fitWidth="200.0" layoutX="235.0" layoutY="50.0" />
             <Label fx:id="mus" layoutX="-464.0" layoutY="455.0" prefHeight="28.0" prefWidth="2044.0">
                <font>
@@ -124,7 +124,7 @@
             </ScrollPane>
             <WebView fx:id="webview" layoutX="769.0" layoutY="63.0" prefHeight="200.0" prefWidth="200.0" visible="false" />
             <JFXProgressBar fx:id="progress" layoutX="360.0" layoutY="320.0" visible="false" />
-            <Button layoutX="970.0" layoutY="60.0" mnemonicParsing="false" onAction="#x" text="Fechar Youtube" />
+            <Button layoutX="970.0" layoutY="60.0" mnemonicParsing="false" onAction="#x" text="Fechar esse carai" />
          </children>
       </Pane>
       <Button fx:id="lupa" layoutX="1006.0" layoutY="66.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="95.0" text="Ok" />
