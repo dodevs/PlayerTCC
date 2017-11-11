@@ -948,6 +948,7 @@ public class ControllerAudio {
         String path = arquivos.get(list.getSelectionModel().getSelectedIndex()).getAbsolutePath();
         path = path.replace("\\","/");
         File file = new File(path);
+        System.out.println(path);
         
     	String AUDIO_URL = file.toURI().toString();
 
@@ -959,6 +960,7 @@ public class ControllerAudio {
     	mus.setText(name);
         initTxt();
     	mediaa = new Media(AUDIO_URL);
+    	System.out.println(media);
     	mediaPlayer = new MediaPlayer(mediaa);
     	media = new MediaView(mediaPlayer);
     	mediaPlayer.play();
