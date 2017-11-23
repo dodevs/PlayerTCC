@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane fx:id="pane" prefHeight="709.0" prefWidth="1096.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main2.ControllerAudio">
+   <children>
+
+
+
+            <Pane fx:id="pane1" layoutY="103.0" prefHeight="598.0" prefWidth="1093.0">
+         <children>
+            <MediaView fx:id="media" fitHeight="200.0" fitWidth="200.0" layoutX="235.0" layoutY="50.0" />
+            <JFXListView fx:id="list" layoutX="335.0" layoutY="27.0" prefHeight="371.0" prefWidth="781.0" visible="false" />
+          <ImageView fx:id="image" fitHeight="277.0" fitWidth="344.0" layoutX="35.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@unnamed.png" />
+               </image>
+            </ImageView> 
+             <Button fx:id="last2" layoutX="24.0" layoutY="424.0" mnemonicParsing="false" onAction="#last" text="Pesquisar Last.fm" />
+            <TableView fx:id="table" layoutX="427.0" layoutY="8.0" prefHeight="439.0" prefWidth="658.0" />
+
+              </children>
+      </Pane>
+      <MediaView fitHeight="200.0" fitWidth="200.0" layoutX="14.0" layoutY="307.0">
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </MediaView>
+      <JFXToolbar layoutX="5.0" layoutY="-4.0" prefHeight="85.0" prefWidth="1093.0">
+         <left>
+            <JFXHamburger fx:id="menu2" onMouseClicked="#menu2" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="77.0" prefWidth="234.0" text="DiTi " textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Roboto Regular" size="26.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.43888888888888894" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#592222" />
+                        <Stop color="RED" offset="0.2088320101117826" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+         </center>
+         <right>
+            <JFXTextField fx:id="SearchY" prefHeight="36.0" prefWidth="183.0" BorderPane.alignment="CENTER">
+               <focusColor>
+                  <RadialGradient centerX="0.5444444444444444" centerY="0.4666666666666667" radius="0.5">
+                     <stops>
+                        <Stop color="RED" />
+                        <Stop color="RED" offset="0.5747126436781609" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </focusColor></JFXTextField>
+         </right>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </JFXToolbar>
+      <Pane fx:id="pan2" layoutX="2.0" layoutY="87.0" prefHeight="617.0" prefWidth="1087.0" visible="false">
+         <children>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="516.0" prefWidth="881.0">
+               <children>
+                  <GridPane fx:id="Grid" prefHeight="532.0" prefWidth="721.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="485.0" minWidth="10.0" prefWidth="388.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="517.3333435058594" minWidth="10.0" prefWidth="333.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <WebView fx:id="webview" layoutX="769.0" layoutY="63.0" prefHeight="200.0" prefWidth="200.0" visible="false" />
+            <JFXProgressBar fx:id="progress" layoutX="360.0" layoutY="320.0" visible="false" />
+            <Button fx:id="Youtube_Button" layoutX="949.0" layoutY="48.0" mnemonicParsing="false" onAction="#x" text="Fechar Youtube" visible="false" />
+         </children>
+      </Pane>
+      <Button fx:id="lupa" layoutX="976.0" layoutY="66.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="95.0" text="Buscar" />
+      <Pane fx:id="pane3" cache="true" cacheHint="QUALITY" layoutX="150.0" layoutY="108.0" prefHeight="506.0" prefWidth="681.0" visible="false" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="270.0" AnchorPane.topAnchor="108.0">
+         <children>
+            <JFXTextField fx:id="login" alignment="CENTER" layoutX="205.0" layoutY="131.0" prefHeight="25.0" prefWidth="297.0" promptText="Login">
+               <font>
+                  <Font name="FontAwesome Regular" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="senha" alignment="CENTER" layoutX="204.0" layoutY="187.0" prefHeight="25.0" prefWidth="297.0" promptText="Senha">
+               <font>
+                  <Font name="FontAwesome Regular" size="18.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton layoutX="205.0" layoutY="239.0" onAction="#logar" text="Entrar">
+               <font>
+                  <Font name="FontAwesome Regular" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="307.0" layoutY="239.0" prefHeight="38.0" prefWidth="91.0" text="Convidado" />
+            <JFXButton layoutX="419.0" layoutY="239.0" prefHeight="38.0" prefWidth="83.0" text="Cadastrar" />
+         </children>
+      </Pane>
+      <StackPane fx:id="stack" layoutX="432.0" layoutY="197.0" prefHeight="150.0" prefWidth="200.0" visible="false" />
+      <JFXSpinner fx:id="spinner" layoutX="134.0" layoutY="228.0" visible="false" />
+      <Pane fx:id="pane6" layoutX="50.0" layoutY="128.0" prefHeight="559.0" prefWidth="1035.0" visible="false">
+         <children>
+            <TextField fx:id="link" alignment="CENTER" layoutX="224.0" layoutY="35.0" prefHeight="34.0" prefWidth="611.0" promptText="Coloque o link aqui...">
+               <font>
+                  <Font name="FontAwesome Regular" size="22.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="converter" layoutX="430.0" layoutY="205.0" onAction="#converter" prefHeight="40.0" prefWidth="179.0" text="Converter" />
+            <JFXButton fx:id="selecionar" layoutX="431.0" layoutY="274.0" onAction="#selecionar" prefHeight="40.0" prefWidth="179.0" text="Selecionar arquivo" />
+            <TextField fx:id="way" alignment="CENTER" editable="false" layoutX="224.0" layoutY="92.0" prefHeight="34.0" prefWidth="611.0" promptText="Caminho">
+               <font>
+                  <Font name="FontAwesome Regular" size="22.0" />
+               </font>
+            </TextField>
+            <Button layoutX="874.0" layoutY="101.0" mnemonicParsing="false" onAction="#salvarem" text="Salvar em.." />
+            <ComboBox fx:id="format" layoutX="224.0" layoutY="166.0" prefWidth="150.0" />
+            <ComboBox fx:id="isvideo" layoutX="404.0" layoutY="166.0" prefWidth="150.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="PaneLast" layoutX="18.0" layoutY="87.0" prefHeight="588.0" prefWidth="1058.0" visible="false">
+         <children>
+            <Label layoutX="7.0" layoutY="424.0" prefHeight="40.0" prefWidth="151.0" text="As musicas similares" />
+            <Label layoutX="7.0" layoutY="363.0" prefHeight="40.0" prefWidth="151.0" text="O Autor" />
+            <Label layoutX="15.0" layoutY="316.0" prefHeight="40.0" prefWidth="151.0" text="Os Albuns" />
+            <Label fx:id="MusicLast" layoutX="32.0" layoutY="32.0" text="O nome da musica" />
+            <Label fx:id="CantorLast" layoutX="64.0" layoutY="62.0" text="O Cantor" />
+            <ImageView fx:id="AlbumLast" fitHeight="150.0" fitWidth="200.0" layoutX="500.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true" x="200.0" />
+         </children>
+      </Pane>
+        <AnchorPane fx:id="navList" layoutY="79.0" prefHeight="627.0" prefWidth="180.0" style="-fx-background-color:white" translateX="-180" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="79.0">
+            <children>
+            <Button layoutY="148.0" mnemonicParsing="false" onAction="#clickV" prefHeight="25.0" prefWidth="180.0" text="Youtube" />
+            <Button fx:id="coe" layoutY="123.0" mnemonicParsing="false" onAction="#music" prefHeight="25.0" prefWidth="180.0" text="Musicas Locais" />
+            <Button layoutY="173.0" mnemonicParsing="false" onAction="#im" prefHeight="25.0" prefWidth="180.0" text="Importar músicas" />
+            <JFXButton layoutY="207.0" onAction="#down" prefHeight="25.0" prefWidth="180.0" text="Conversor" />
+            <Pane fx:id="pane5" prefHeight="123.0" prefWidth="180.0" style="-fx-background-color: #8a2be2;">
+               <children>
+                  <Circle fx:id="cir2" fill="DODGERBLUE" layoutX="46.0" layoutY="62.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            </children>
+        </AnchorPane>
+      <Pane fx:id="paneLabel" layoutY="570.0" prefHeight="150.0" prefWidth="1093.0">
+         <children>
+            <Button fx:id="aleatorio" layoutX="998.0" layoutY="73.0" mnemonicParsing="false" onAction="#click" text="Aleatorio" />
+            <Button layoutX="849.0" layoutY="73.0" mnemonicParsing="false" onAction="#prox" text="Proximo" />
+            <Button layoutX="716.0" layoutY="73.0" mnemonicParsing="false" onAction="#ante" text="Anterior" />
+            <Label fx:id="playTime" layoutX="25.0" layoutY="78.0" text="00:00" />
+            <JFXSlider fx:id="slider" indicatorPosition="RIGHT" layoutX="25.0" layoutY="38.0" majorTickUnit="24.0" prefHeight="17.0" prefWidth="1058.0" value="-1.0" />
+            <JFXButton fx:id="play" layoutX="121.0" layoutY="73.0" onAction="#open" prefHeight="25.0" prefWidth="64.0" text="Play" />
+            <JFXButton fx:id="stop" layoutX="191.0" layoutY="73.0" onAction="#stop" prefHeight="25.0" prefWidth="75.0" text="Stop" />
+            <Label fx:id="mus" layoutX="-735.0" layoutY="104.0" prefHeight="28.0" prefWidth="2044.0">
+               <font>
+                  <Font name="FontAwesome Regular" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
